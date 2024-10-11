@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Reunión Jitsi Meet</title>
+    <script src='https://meet.jit.si/external_api.js'></script>
+    <style>
+        #jitsi-meet {
+            width: 800px; /* Ajusta el tamaño según necesites */
+            height: 600px;
+            justify-content: center;
+        }
+        body {
+            background-color: #DB94AB; /* Corrige el valor del color */
+        }
+    </style>
+    
+</head>
+<body>
+ --
+    <center>
+        <table width="900" border="0">
+            <tbody>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="197">&nbsp;</td>
+                    <td> 
+                        <div id="jitsi-meet"></div>
+                        <script>
+                            const domain = 'meet.jit.si';
+                            const options = {
+                                roomName: 'NombreDeTuSala', // Cambia esto por el nombre de tu sala
+                                width: 800,
+                                height: 600,
+                                parentNode: document.querySelector('#jitsi-meet'),
+                                interfaceConfigOverwrite: {
+                                    // Personaliza la interfaz si lo deseas
+                                },
+                                configOverwrite: {
+                                    // Configuraciones adicionales si es necesario
+                                }
+                            };
+                            const api = new JitsiMeetExternalAPI(domain, options);
+                        </script>
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="136">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
+</body>
+</html>
